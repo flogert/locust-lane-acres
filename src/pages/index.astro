@@ -10,12 +10,12 @@ import SiteLayout from "../layouts/SiteLayout.astro";
 	<div class="page-shell">
 		<header class="site-header">
 			<a class="brand" href="/" aria-label="Locust Lane Acres home">
-				<img class="brand-logo" src="/locustlogo.png" alt="Locust Lane Acres logo" width="140" height="140" />
+				<img class="brand-logo" src="/locustlogo.png" alt="" width="140" height="140" />
 				<span class="brand-title">Locust Lane Acres</span>
 			</a>
 		</header>
 
-		<main class="farm-info" aria-labelledby="farm-heading">
+		<main class="farm-info" id="main-content" tabindex="-1" aria-labelledby="farm-heading">
 			<h1 id="farm-heading" class="sr-only">Locust Lane Acres</h1>
 			<p class="farm-info__lede">
 				Nestled in the small town of Littlestown, we offer delicious, high quality,
@@ -23,7 +23,7 @@ import SiteLayout from "../layouts/SiteLayout.astro";
 				purchase.
 			</p>
 
-			<hr class="farm-info__divider" />
+			<hr class="farm-info__divider" aria-hidden="true" />
 
 			<h2 class="farm-info__heading">See the difference!</h2>
 			<ul class="farm-info__benefits" aria-label="Feed and quality highlights">
