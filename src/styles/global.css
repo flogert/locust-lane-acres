@@ -184,6 +184,7 @@ img {
 	line-height: 1.5;
 	font-weight: 600;
 	color: var(--footer-brown);
+	text-wrap: balance;
 }
 
 .farm-info__benefits {
@@ -264,21 +265,13 @@ img {
 	display: inline-block;
 }
 
-.site-footer__directions {
-	font-weight: 700;
-	color: var(--footer-brown);
-	border: 1px solid rgba(85, 48, 30, 0.3);
-	border-radius: 999px;
-	padding: 10px 18px;
-	min-height: 44px;
-	display: inline-flex;
-	align-items: center;
-	transition: background-color 180ms ease;
-}
-
-.site-footer__directions:hover,
-.site-footer__directions:focus-visible {
-	background: rgba(255, 253, 248, 0.9);
+.site-footer__note {
+	margin: 0;
+	max-width: 38ch;
+	font-size: 0.85rem;
+	font-weight: 600;
+	line-height: 1.45;
+	text-wrap: balance;
 }
 
 @media (max-width: 640px) {
