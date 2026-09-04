@@ -5,373 +5,71 @@ import SiteLayout from "../layouts/SiteLayout.astro";
 
 <SiteLayout
 	title="Locust Lane Acres | Fresh Eggs in Littlestown, PA"
-	description="A welcoming Astro starter for Locust Lane Acres, a local egg farm in Littlestown, Pennsylvania."
+	description="Locust Lane Acres is a small family farm in Littlestown, Pennsylvania, raising hens on a plant based diet for clean, fresh eggs."
 >
-	<div class="page-shell page-shell--single">
-		<section class="farm-footer farm-footer--landing" id="top">
-			<header class="topbar topbar--landing">
-				<a class="brand brand-link" href="/" aria-label="Locust Lane Acres home">
-					<img class="brand-logo" src="/locustlogo.png" alt="Locust Lane Acres logo" />
-					<div class="brand-title" aria-hidden="true">
-						<span>Locust Lane</span>
-						<span>Acres</span>
-					</div>
-				</a>
-				<button
-					class="menu-toggle"
-					type="button"
-					aria-expanded="false"
-					aria-controls="primary-navigation"
-				>
-					<span class="sr-only">Toggle navigation menu</span>
-					<span class="menu-toggle__bar menu-toggle__bar--top" aria-hidden="true"></span>
-					<span class="menu-toggle__bar menu-toggle__bar--middle" aria-hidden="true"></span>
-					<span class="menu-toggle__bar menu-toggle__bar--bottom" aria-hidden="true"></span>
-				</button>
-				<nav class="nav nav--landing" id="primary-navigation" aria-label="Primary" hidden>
-					<a href="#about">About the Farm</a>
-					<a href="#eggs" data-view="eggs">Egg Pickup</a>
-					<a href="#visit" data-view="visit">Plan a Visit</a>
-				</nav>
-			</header>
+	<div class="page-shell">
+		<header class="site-header">
+			<a class="brand" href="/" aria-label="Locust Lane Acres home">
+				<img class="brand-logo" src="/locustlogo.png" alt="Locust Lane Acres logo" width="140" height="140" />
+				<span class="brand-title">Locust Lane Acres</span>
+			</a>
+		</header>
 
-			<main class="farm-footer__inner">
-				<div class="farm-landing__intro" id="about">
-					<p class="farm-landing__lede">
-						Locust Lane Acres is built around a simple promise: clean, fresh eggs, a
-						familiar pickup rhythm, and a slower pace that still feels practical for
-						busy families around Littlestown.
-					</p>
-					<p class="farm-landing__support">
-						Nestled in the small town of Littlestown, we offer delicious eggs with a
-						warm, straightforward farm stand feel. The tone stays community first,
-						with room for simple updates, seasonal notices, clear pickup details, and
-						hens fed with plant based feed.
-					</p>
-					<div class="egg-toggle" aria-label="Switch between egg pickup and plan a visit sections">
-						<label class="egg-toggle__control">
-							<span class="sr-only">Toggle between egg pickup mode and plan a visit mode</span>
-							<input class="egg-toggle__input" type="checkbox" />
-							<span class="egg-toggle__shell" aria-hidden="true">
-								<span class="egg-toggle__shadow"></span>
-								<span class="egg-toggle__egg"></span>
-							</span>
-							<span class="egg-toggle__status" aria-hidden="true">
-								<span class="egg-toggle__state egg-toggle__state--off">Egg Pickup</span>
-								<span class="egg-toggle__state egg-toggle__state--on">Plan a Visit</span>
-							</span>
-						</label>
-					</div>
-				</div>
+		<main class="farm-info" aria-labelledby="farm-heading">
+			<h1 id="farm-heading" class="sr-only">Locust Lane Acres</h1>
+			<p class="farm-info__lede">
+				Nestled in the small town of Littlestown, we offer delicious, high quality,
+				naturally raised chicken eggs for your restaurant, store or large quantity
+				purchase.
+			</p>
 
-				<div class="farm-footer__content farm-footer__content--switcher" data-view="eggs">
-					<article class="farm-footer__panel farm-footer__panel--eggs" data-panel="eggs" id="eggs">
-						<h3>See the difference!</h3>
-						<p class="farm-footer__panel-copy">
-							Small batch collection with same week availability and a classic weekly
-							pickup format built for regulars.
-						</p>
-						<div class="farm-footer__egg-display" aria-hidden="true">
-							<span class="farm-footer__egg-stage">
-								<span class="farm-footer__egg-shadow"></span>
-								<span class="egg-toggle__egg egg-toggle__egg--display"></span>
-							</span>
-						</div>
-						<p>
-							High quality, naturally raised chicken eggs for restaurants, stores, and
-							large quantity purchase.
-						</p>
-						<div class="farm-footer__panel-divider" aria-hidden="true"></div>
-						<h3 class="farm-footer__panel-subhead">Taste the difference!</h3>
-						<p class="farm-footer__panel-copy">
-							Hens fed with plant based feed produce eggs rich in nutrients and a clean,
-							better tasting finish.
-						</p>
-						<ul class="farm-footer__benefits">
-							<li>Soy Free</li>
-							<li>Corn Free</li>
-							<li>Non GMO</li>
-							<li>100% Natural</li>
-							<li>Plant Based Feed</li>
-						</ul>
-					</article>
+			<hr class="farm-info__divider" />
 
-					<article class="farm-footer__panel farm-footer__panel--visit" data-panel="visit" id="visit" aria-hidden="true">
-						<h3>Plan a visit.</h3>
-						<p>
-							Easy porch or farm stand pickup, short clear windows, and straightforward
-							farm communication make it easy to stop by without overcomplicating the
-							routine.
-						</p>
-						<div class="visit-gallery-shell">
-							<button class="visit-gallery__arrow visit-gallery__arrow--prev" type="button" aria-label="Show previous visit photo">
-								<span aria-hidden="true">&larr;</span>
-							</button>
-							<div class="visit-gallery" aria-label="Egg and farm photo gallery" tabindex="0">
-							<figure class="visit-gallery__item">
-								<img
-									class="visit-gallery__image"
-									src="/Use this Chicken pic.png"
-									alt="Brown hens inside the Locust Lane Acres chicken house"
-									loading="lazy"
-								/>
-								<figcaption>Inside the chicken house</figcaption>
-							</figure>
-							<figure class="visit-gallery__item">
-								<img
-									class="visit-gallery__image"
-									src="https://pixabay.com/get/g271705e643e6e10e97b484636c361cd2d3802faa0016c47894f953b81617ea8105c9eb6d9c8681472b7ffe48285422e1_1920.jpg?longlived="
-									alt="Free range chicken farm meadow scene from Pixabay"
-									loading="lazy"
-									referrerpolicy="no-referrer"
-								/>
-								<figcaption>Free range meadow</figcaption>
-							</figure>
-							<figure class="visit-gallery__item">
-								<img
-									class="visit-gallery__image"
-									src="https://pixabay.com/get/g8a043ea053bc17a0bd4d2ddc6fa277b7b625b5f0417294855c9b57649c2b1935f42e491c75c9d88e911c582145a437db_1920.jpg?longlived="
-									alt="Chicken coop and farm yard photo from Pixabay"
-									loading="lazy"
-									referrerpolicy="no-referrer"
-								/>
-								<figcaption>Chicken coop stop</figcaption>
-							</figure>
-							<figure class="visit-gallery__item">
-								<img
-									class="visit-gallery__image"
-									src="https://pixabay.com/get/g96438419dcca3737639d0b2587f8ef94d574e1ca29ff70567b49b105ceb6f4b78be0ec35cd906b74df81d767239ad26e_1920.jpg?longlived="
-									alt="Brown eggs in cups photo from Pixabay"
-									loading="lazy"
-									referrerpolicy="no-referrer"
-								/>
-								<figcaption>Fresh egg display</figcaption>
-							</figure>
-							</div>
-							<button class="visit-gallery__arrow visit-gallery__arrow--next" type="button" aria-label="Show next visit photo">
-								<span aria-hidden="true">&rarr;</span>
-							</button>
-						</div>
-						<div class="visit-gallery__dots" role="tablist" aria-label="Choose a visit photo">
-							<button class="visit-gallery__dot" type="button" data-index="0" aria-current="true" aria-label="Show photo 1 of 4"></button>
-							<button class="visit-gallery__dot" type="button" data-index="1" aria-current="false" aria-label="Show photo 2 of 4"></button>
-							<button class="visit-gallery__dot" type="button" data-index="2" aria-current="false" aria-label="Show photo 3 of 4"></button>
-							<button class="visit-gallery__dot" type="button" data-index="3" aria-current="false" aria-label="Show photo 4 of 4"></button>
-						</div>
-					</article>
-				</div>
-			</main>
+			<h2 class="farm-info__heading">See the difference!</h2>
+			<ul class="farm-info__benefits" aria-label="Feed and quality highlights">
+				<li>Soy Free</li>
+				<li>Corn Free</li>
+				<li>Non GMO</li>
+				<li>100% Natural</li>
+				<li>Plant Based Feed</li>
+			</ul>
 
-			<footer class="farm-footer__brand farm-footer__brand--footer">
-				<div class="farm-footer__info">
-					<a class="farm-footer__lockup" href="/" aria-label="Locust Lane Acres home">
-						<img class="brand-logo farm-footer__mark" src="/locustlogo.png" alt="" aria-hidden="true" />
-						<div>
-							<h2>Locust Lane Acres, LLC</h2>
-						</div>
-					</a>
+			<figure class="farm-info__photo">
+				<img
+					src="/Use this Chicken pic.png"
+					alt="Brown hens inside the Locust Lane Acres chicken house"
+					width="640"
+					height="542"
+				/>
+			</figure>
 
-					<address class="farm-footer__contact">
-						<p>399 Locust Lane</p>
-						<p>Littlestown, PA 17340</p>
-						<a href="tel:17173590035">717.359.0035</a>
-						<p>
-							We keep it pretty simple on the farm. Leave us a message and we will call
-							you back.
-						</p>
-					</address>
-				</div>
+			<h2 class="farm-info__heading">Taste the difference!</h2>
+			<p class="farm-info__support">
+				Hens fed with plant based feed produce eggs rich in nutrients and a clean,
+				better tasting finish.
+			</p>
+		</main>
 
-				<div class="farm-footer__map">
-					<a
-						class="farm-footer__directions"
-						href="https://www.google.com/maps/dir/?api=1&destination=399+Locust+Lane,+Littlestown,+PA+17340"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						Get Directions &rarr;
-					</a>
-					<iframe
-						src="https://www.google.com/maps?q=399+Locust+Lane,+Littlestown,+PA+17340&output=embed"
-						title="Map showing directions to Locust Lane Acres"
-						loading="lazy"
-						referrerpolicy="no-referrer-when-downgrade"
-					></iframe>
-				</div>
-			</footer>
-		</section>
+		<footer class="site-footer">
+			<div class="site-footer__brand">
+				<span class="site-footer__name">Locust Lane Acres</span>
+				<p class="site-footer__motto">
+					Simply, a better tasting egg.
+					<img class="site-footer__egg" src="/egg art.png" alt="" aria-hidden="true" width="16" height="18" />
+				</p>
+			</div>
+			<address class="site-footer__contact">
+				<span>399 Locust Lane, Littlestown, PA 17340</span>
+				<a href="tel:17173590035">717.359.0035</a>
+			</address>
+			<a
+				class="site-footer__directions"
+				href="https://www.google.com/maps/dir/?api=1&destination=399+Locust+Lane,+Littlestown,+PA+17340"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				Get Directions
+			</a>
+		</footer>
 	</div>
-
-	<script>
-		const menuButton = document.querySelector('.menu-toggle');
-		const navigation = document.querySelector('#primary-navigation');
-		const menuQuery = window.matchMedia('(min-width: 641px)');
-		const eggToggleControl = document.querySelector('.egg-toggle__control');
-		const eggToggleInput = eggToggleControl?.querySelector('.egg-toggle__input');
-		const eggToggleEgg = eggToggleControl?.querySelector('.egg-toggle__egg');
-		const eggToggleShadow = eggToggleControl?.querySelector('.egg-toggle__shadow');
-		const eggToggleOff = eggToggleControl?.querySelector('.egg-toggle__state--off');
-		const eggToggleOn = eggToggleControl?.querySelector('.egg-toggle__state--on');
-		const contentSwitcher = document.querySelector('.farm-footer__content--switcher');
-		const eggPanel = contentSwitcher?.querySelector('[data-panel="eggs"]');
-		const visitPanel = contentSwitcher?.querySelector('[data-panel="visit"]');
-		const visitGallery = document.querySelector('.visit-gallery');
-		const menuBars = {
-			top: menuButton?.querySelector('.menu-toggle__bar--top'),
-			middle: menuButton?.querySelector('.menu-toggle__bar--middle'),
-			bottom: menuButton?.querySelector('.menu-toggle__bar--bottom')
-		};
-
-		if (menuButton instanceof HTMLButtonElement && navigation instanceof HTMLElement) {
-			const syncMenuIcon = (isOpen) => {
-				if (!(menuBars.top instanceof HTMLElement) || !(menuBars.middle instanceof HTMLElement) || !(menuBars.bottom instanceof HTMLElement)) {
-					return;
-				}
-
-				menuBars.top.style.transform = isOpen
-					? 'translateX(-50%) translateY(7px) rotate(45deg)'
-					: 'translateX(-50%)';
-				menuBars.middle.style.opacity = isOpen ? '0' : '1';
-				menuBars.bottom.style.transform = isOpen
-					? 'translateX(-50%) translateY(-7px) rotate(-45deg)'
-					: 'translateX(-50%)';
-			};
-
-			const setMenuState = (isOpen) => {
-				menuButton.setAttribute('aria-expanded', String(isOpen));
-				navigation.hidden = !isOpen;
-				syncMenuIcon(isOpen);
-			};
-
-			const syncMenu = () => {
-				if (menuQuery.matches) {
-					navigation.hidden = false;
-					menuButton.setAttribute('aria-expanded', 'false');
-					return;
-				}
-
-				setMenuState(menuButton.getAttribute('aria-expanded') === 'true');
-			};
-
-			menuButton.addEventListener('click', () => {
-				setMenuState(menuButton.getAttribute('aria-expanded') !== 'true');
-			});
-
-			navigation.querySelectorAll('a').forEach((link) => {
-				link.addEventListener('click', () => {
-					if (!menuQuery.matches) {
-						setMenuState(false);
-					}
-				});
-			});
-
-			window.addEventListener('keydown', (event) => {
-				if (event.key === 'Escape' && !menuQuery.matches) {
-					setMenuState(false);
-					menuButton.focus();
-				}
-			});
-
-			menuQuery.addEventListener('change', syncMenu);
-			syncMenu();
-		}
-
-		if (visitGallery instanceof HTMLElement) {
-			const prevArrow = document.querySelector('.visit-gallery__arrow--prev');
-			const nextArrow = document.querySelector('.visit-gallery__arrow--next');
-			const items = Array.from(visitGallery.querySelectorAll('.visit-gallery__item'));
-			const dots = Array.from(document.querySelectorAll('.visit-gallery__dot'));
-
-			const currentIndex = () => {
-				const index = Math.round(visitGallery.scrollLeft / visitGallery.clientWidth);
-				return Math.min(Math.max(index, 0), items.length - 1);
-			};
-
-			const goToIndex = (index) => {
-				const clamped = Math.min(Math.max(index, 0), items.length - 1);
-				visitGallery.scrollTo({ left: clamped * visitGallery.clientWidth, behavior: 'smooth' });
-			};
-
-			const syncDots = () => {
-				const active = currentIndex();
-				dots.forEach((dot, index) => {
-					dot.setAttribute('aria-current', String(index === active));
-				});
-			};
-
-			prevArrow?.addEventListener('click', () => goToIndex(currentIndex() - 1));
-			nextArrow?.addEventListener('click', () => goToIndex(currentIndex() + 1));
-
-			dots.forEach((dot, index) => {
-				dot.addEventListener('click', () => goToIndex(index));
-			});
-
-			visitGallery.addEventListener('keydown', (event) => {
-				if (event.key === 'ArrowLeft') {
-					event.preventDefault();
-					goToIndex(currentIndex() - 1);
-				}
-				if (event.key === 'ArrowRight') {
-					event.preventDefault();
-					goToIndex(currentIndex() + 1);
-				}
-			});
-
-			let scrollTimeout;
-			visitGallery.addEventListener('scroll', () => {
-				window.clearTimeout(scrollTimeout);
-				scrollTimeout = window.setTimeout(syncDots, 100);
-			});
-
-			window.addEventListener('resize', syncDots);
-			syncDots();
-		}
-
-		if (
-			eggToggleControl instanceof HTMLLabelElement &&
-			eggToggleInput instanceof HTMLInputElement &&
-			eggToggleEgg instanceof HTMLElement &&
-			eggToggleShadow instanceof HTMLElement &&
-			eggToggleOff instanceof HTMLElement &&
-			eggToggleOn instanceof HTMLElement
-		) {
-			const syncEggToggle = () => {
-				const isChecked = eggToggleInput.checked;
-				const isActive = eggToggleControl.matches(':hover') || eggToggleControl.matches(':focus-within');
-				const eggShift = isChecked ? 100 : 0;
-				const eggLift = isActive ? -4 : 0;
-				const shadowLift = isActive ? 1 : 0;
-
-				eggToggleEgg.style.transform = `translateX(${eggShift}px) translateY(${eggLift}px)`;
-				eggToggleShadow.style.transform = `translateX(${eggShift}px) translateY(${shadowLift}px)`;
-				eggToggleShadow.style.opacity = isChecked ? (isActive ? '0.6' : '0.72') : isActive ? '0.22' : '0.18';
-				eggToggleOff.style.opacity = isChecked ? '0.45' : '1';
-				eggToggleOn.style.opacity = isChecked ? '1' : '0.45';
-
-				if (contentSwitcher instanceof HTMLElement) {
-					contentSwitcher.dataset.view = isChecked ? 'visit' : 'eggs';
-				}
-
-				if (eggPanel instanceof HTMLElement && visitPanel instanceof HTMLElement) {
-					eggPanel.setAttribute('aria-hidden', String(isChecked));
-					visitPanel.setAttribute('aria-hidden', String(!isChecked));
-				}
-			};
-
-			eggToggleInput.addEventListener('change', syncEggToggle);
-			eggToggleControl.addEventListener('pointerenter', syncEggToggle);
-			eggToggleControl.addEventListener('pointerleave', syncEggToggle);
-			eggToggleControl.addEventListener('focusin', syncEggToggle);
-			eggToggleControl.addEventListener('focusout', syncEggToggle);
-			syncEggToggle();
-
-			document.querySelectorAll('.nav a[data-view]').forEach((link) => {
-				link.addEventListener('click', () => {
-					eggToggleInput.checked = link.getAttribute('data-view') === 'visit';
-					syncEggToggle();
-				});
-			});
-		}
-
-	</script>
 </SiteLayout>
