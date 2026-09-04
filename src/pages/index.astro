@@ -10,7 +10,7 @@ import SiteLayout from "../layouts/SiteLayout.astro";
 	<div class="page-shell">
 		<header class="site-header">
 			<a class="brand" href="/" aria-label="Locust Lane Acres home">
-				<img class="brand-logo" src="/locustlogo.png" alt="" width="140" height="140" />
+				<img class="brand-logo" src="/locust-lane-acres-logo.png" alt="" aria-hidden="true" width="140" height="105" fetchpriority="high" />
 				<span class="brand-title">Locust Lane Acres</span>
 			</a>
 		</header>
@@ -35,10 +35,11 @@ import SiteLayout from "../layouts/SiteLayout.astro";
 
 			<figure class="farm-info__photo">
 				<img
-					src="/Use this Chicken pic.png"
+					src="/locust-lane-acres-hens.png"
 					alt="Brown hens inside the Locust Lane Acres chicken house"
 					width="640"
-					height="542"
+					height="424"
+					loading="lazy"
 				/>
 			</figure>
 
@@ -49,22 +50,20 @@ import SiteLayout from "../layouts/SiteLayout.astro";
 			</p>
 		</main>
 
-		<footer class="site-footer">
+		<footer class="site-footer" aria-label="Contact information">
 			<div class="site-footer__brand">
 				<span class="site-footer__name">Locust Lane Acres</span>
 				<p class="site-footer__motto">
 					Simply, a better tasting egg.
-					<img class="site-footer__egg" src="/egg art.png" alt="" aria-hidden="true" width="16" height="18" />
+					<img class="site-footer__egg" src="/egg-icon.png" alt="" aria-hidden="true" width="14" height="16" />
 				</p>
 			</div>
 			<p class="site-footer__note">
-				We keep it pretty simple. If you like what you see, leave us a message and
-				we'll call ya back.
+				We keep it pretty simple around here. Leave us a
+				message and we'll call ya back.
 			</p>
-			<address class="site-footer__contact">
-				<span>399 Locust Lane, Littlestown, PA 17340</span>
-				<a href="tel:17173590035">717.359.0035</a>
-			</address>
+			<a class="site-footer__phone" href="tel:+17173590035" aria-label="Call Locust Lane Acres at 7 1 7. 3 5 9. 0 0 3 5">717.359.0035</a>
+			<span class="site-footer__legal">Locust Lane Acres, LLC &middot; Littlestown, PA</span>
 		</footer>
 	</div>
 </SiteLayout>

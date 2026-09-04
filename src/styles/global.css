@@ -136,7 +136,7 @@ img {
 	content: "";
 	position: absolute;
 	inset: 0;
-	background-image: url("/AdobeStock_784914935.png");
+	background-image: url("/diamond-mesh-texture.png");
 	background-size: 520px;
 	background-repeat: repeat;
 	opacity: 0.1;
@@ -212,10 +212,10 @@ img {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 6px;
-	padding-top: 12px;
+	gap: 4px;
+	padding-top: 8px;
 	border-top: 1px solid rgba(85, 48, 30, 0.14);
-	font-size: 0.8rem;
+	font-size: 0.78rem;
 	color: var(--footer-brown);
 	text-align: center;
 }
@@ -230,7 +230,7 @@ img {
 	font-family: "Alegreya", serif;
 	font-weight: 800;
 	font-style: italic;
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	color: var(--footer-brown);
 }
 
@@ -249,29 +249,29 @@ img {
 	object-fit: contain;
 }
 
-.site-footer__contact {
-	font-style: normal;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
-	gap: 4px 10px;
-}
-
-.site-footer__contact a {
-	font-weight: 700;
-	color: var(--barn);
-	padding: 4px 2px;
-	display: inline-block;
-}
-
 .site-footer__note {
 	margin: 0;
-	max-width: 38ch;
-	font-size: 0.85rem;
+	max-width: 44ch;
+	font-size: 0.82rem;
 	font-weight: 600;
-	line-height: 1.45;
+	line-height: 1.35;
 	text-wrap: balance;
+}
+
+.site-footer__phone {
+	font-size: 1.15rem;
+	line-height: 1.2;
+	font-weight: 800;
+	color: var(--barn);
+	padding: 6px 12px;
+	min-height: 44px;
+	display: inline-flex;
+	align-items: center;
+}
+
+.site-footer__legal {
+	margin-top: 2px;
+	font-weight: 600;
 }
 
 @media (max-width: 640px) {
@@ -281,6 +281,12 @@ img {
 
 	.farm-info {
 		padding: 20px 18px;
+		gap: 14px;
+	}
+
+	.farm-info__lede,
+	.farm-info__support {
+		font-size: 1rem;
 	}
 
 	.farm-info__photo img {
@@ -288,6 +294,19 @@ img {
 	}
 
 	.site-footer {
-		font-size: 0.78rem;
+		font-size: 0.8rem;
+	}
+
+	.site-footer__note {
+		font-size: 0.85rem;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		transition-duration: 0.01ms !important;
+		animation-duration: 0.01ms !important;
 	}
 }
